@@ -1,0 +1,24 @@
+﻿@model MvcEducation.ViewModels.ClassesForStudent
+
+@{
+    ViewBag.Title = "Classes For Student";
+}
+
+<h2>Classes For Student</h2>
+
+<table class="table table-condensed">
+    <tr><th>Name</th><th>Major</th><th>SAT</th></tr>
+    <tr>
+        <td>@Model.Student.Firstname @Model.Student.Lastname</td>
+        <td>@Model.Student.Major.Description</td>
+        <td>@Model.Student.SAT</td>
+    </tr>
+</table>
+<table class="table table-condensed">
+    <tr><th>Class Description</th></tr>
+@foreach (var cls in Model.Classes) {
+    <tr>
+        <td>@cls.Description</td>
+    </tr>
+}
+</table>
