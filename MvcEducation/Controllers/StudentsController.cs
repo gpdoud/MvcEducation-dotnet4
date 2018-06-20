@@ -38,6 +38,7 @@ namespace MvcEducation.Controllers
 								on s.Id equals e.StudentId
 							join c in db.Classes
 								on e.ClassId equals c.Id
+							where s.Id == id
 							select c;
 			cfs.Classes = classes;
 			return View(cfs);

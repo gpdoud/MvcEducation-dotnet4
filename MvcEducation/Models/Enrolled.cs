@@ -10,6 +10,7 @@ namespace MvcEducation.Models {
 		public virtual Student Student { get; set; }
 		public int ClassId { get; set; }
 		public virtual Class Class {get; set; }
+		public decimal Grade { get; set; }
 
 		public Enrolled() { }
 	}
